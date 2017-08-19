@@ -1,0 +1,10 @@
+c:\Honest-Overhead\bin\Debug\netcoreapp2.0\HonestOverhead.deps.json
+c:\Honest-Overhead\bin\Debug\netcoreapp2.0\HonestOverhead.runtimeconfig.json
+c:\Honest-Overhead\bin\Debug\netcoreapp2.0\HonestOverhead.runtimeconfig.dev.json
+c:\Honest-Overhead\bin\Debug\netcoreapp2.0\HonestOverhead.dll
+c:\Honest-Overhead\bin\Debug\netcoreapp2.0\HonestOverhead.pdb
+c:\Honest-Overhead\obj\Debug\netcoreapp2.0\HonestOverhead.csproj.CoreCompileInputs.cache
+c:\Honest-Overhead\obj\Debug\netcoreapp2.0\HonestOverhead.AssemblyInfoInputs.cache
+c:\Honest-Overhead\obj\Debug\netcoreapp2.0\HonestOverhead.AssemblyInfo.cs
+c:\Honest-Overhead\obj\Debug\netcoreapp2.0\HonestOverhead.dll
+c:\Honest-Overhead\obj\Debug\netcoreapp2.0\HonestOverhead.pdb
