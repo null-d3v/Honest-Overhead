@@ -12,18 +12,22 @@
         </environment>
     </head>
     <body>
-        <header class="">
-            <h1>Honest Overhead</h1>
-            <h2>Garage Doors of Loiusville</h2>
-            <h3>Garage door repair and installation</h3>
+        <header>
+            <div class="summary">
+                <h1>Honest Overhead</h1>
+                <h2>Garage Doors of Loiusville</h2>
+                <h3>Garage door repair and installation</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">🏠</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav class="">
-            <a href="/">🏠</a>
-            <a href="/services">Services</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>
-        <main class="">
+        <main>
             @RenderBody()
         </main>
         <footer>

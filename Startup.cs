@@ -22,9 +22,6 @@ namespace HonestOverhead
                     "appsettings.json",
                     optional: false,
                     reloadOnChange: true)
-                .AddJsonFile(
-                    $"appsettings.{hostingEnvironment.EnvironmentName}.json",
-                    optional: true)
                 .AddEnvironmentVariables();
 
             Configuration = configurationBuilder.Build();
