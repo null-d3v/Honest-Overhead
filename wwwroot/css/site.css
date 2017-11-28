@@ -22,24 +22,25 @@ header, footer
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 0px;
-    padding: 25px;
+    padding: 25px 0 25px 0;
 }
 
 main
 {
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin: 5% 15% 5% 15%;
 }
 
 nav
 {
     align-items: center;
-    display: flex;
+    padding-right: 30%;
+    text-align: right;
 }
 
 nav ul
 {
     height: 100%;
+    line-height: 87px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -53,21 +54,42 @@ nav ul li
 
 nav ul li a
 {
+    color: #000000;
     display: inline-block;
+    font-weight: bold;
     height: 100%;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover
+{
+    background-color: #255A845B;
+    color: #255A84;
 }
 
 .content
 {
-    background: rgba(255, 255, 255, 0.80);
-    margin: 5%;
-    max-width: 500px;
-    width: 75%;
+    background: #ffffffDA;
+    border-color: #255A84;
+    border-style: solid;
+    border-width: 5px;
+    margin-top: 20px;
+    max-width: 60%;
+    padding: 15px;
+    width: 100%;
 }
 
 .content-right
 {
     margin-left: 20%;
+}
+
+.summary
+{
+    padding-left: 30%;
 }
 
 .summary h1
