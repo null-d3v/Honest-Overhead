@@ -13,12 +13,12 @@
     </head>
     <body>
         <header>
-            <div class="summary">
+            <div class="frame-left summary">
                 <h1>Honest Overhead</h1>
-                <h2>Garage Doors of Loiusville</h2>
+                <h2>Garage Doors of Louisville</h2>
                 <h3>Garage door repair and installation</h3>
             </div>
-            <nav>
+            <nav class="frame-right">
                 <ul>
                     <li><a href="/">🏠</a></li>
                     <li><a href="/services">Services</a></li>
@@ -31,21 +31,18 @@
             @RenderBody()
         </main>
         <footer>
-            <div>
-                <p>Honest Overhead</p>
-                <p>Garage Doors of Loiusville</p>
-                <a href="mailto:HonestOverhead@outlook.com">HonestOverhead@outlook.com</a>
-            </div>
-            <div>
-                <a href="tel:+15022692351">1-502-269-2351</a>
-                <p>Same day service</p>
-            </div>
-            <div>
+            <div class="frame-left">
                 <p>Senior and military discounts</p>
                 <p>Free estimates for new doors</p>
                 <p>No weekend or latenight fees</p>
+                <p>Same day service</p>
             </div>
-            <p>&copy; 2017 - HonestOverhead</p>
+            <div class="frame-right">
+                <p>Honest Overhead</p>
+                <p>Garage Doors of Louisville</p>
+                <p><a href="mailto:HonestOverhead@outlook.com">HonestOverhead@outlook.com</a></p>
+                <p><a href="tel:+15022692351">1-502-269-2351</a></p>
+            </div>
         </footer>
         <environment names="Development">
             <script src="~/js/site.js" asp-append-version="true"></script>
