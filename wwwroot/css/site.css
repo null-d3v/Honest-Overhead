@@ -1,8 +1,36 @@
-﻿@media only screen and (max-width: 650px)
+﻿@media only screen and (max-width: 730px)
+{
+    header, footer
+    {
+        font-size: 0.7em;
+    }
+
+    main
+    {
+        margin: 5% 5% 5% 5% !important;
+    }
+
+    .frame-left
+    {
+        padding-left: 5% !important;
+    }
+
+    .frame-right
+    {
+        padding-right: 5% !important;
+    }
+}
+
+@media only screen and (max-width: 1000px)
 {
     main
     {
         margin: 5% 10% 5% 10% !important;
+    }
+
+    nav ul li a
+    {
+        min-width: 60px !important;
     }
 
     .frame-left
@@ -92,7 +120,7 @@ nav ul li a
     display: inline-block;
     font-weight: bold;
     height: 100%;
-    min-width: 75px;
+    min-width: 100px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -133,7 +161,16 @@ nav ul li a:hover
 .grid-2
 {
     display: grid;
-    grid-template-columns: 50% 50%;
+}
+
+.grid-2-left
+{
+    grid-template-columns: 75% 25%;
+}
+
+.grid-2-right
+{
+    grid-template-columns: 25% 75%;
 }
 
 .summary h1
