@@ -13,11 +13,12 @@
         </environment>
     </head>
     <body>
-        <header>
+        <header id="header" class="clearfix">
+            <div class="content clearfix">
             <div class="frame-left summary">
                 <h1>Honest Overhead</h1>
                 <h2>Garage Doors of Louisville</h2>
-                <h3>Garage door repair and installation</h3>
+                <p>Garage door repair and installation</p>
             </div>
             <nav class="frame-right">
                 <ul>
@@ -27,22 +28,25 @@
                     <!-- <li><a href="/contact">Contact</a></li> -->
                 </ul>
             </nav>
+            </div>
         </header>
-        <main>
+        <main class="content clearfix" id="body">
             @RenderBody()
         </main>
-        <footer>
+        <footer id="footer" class="clearfix">
+            <div class="content clearfix">
             <div class="frame-left">
                 <p>Senior and military discounts</p>
                 <p>Free estimates for new doors</p>
-                <p>No weekend or latenight fees</p>
+                <p>No weekend or late-night fees</p>
                 <p>Same day service</p>
             </div>
             <div class="frame-right">
-                <p>Honest Overhead</p>
+                <p><b>Honest Overhead</b></p>
                 <p>Garage Doors of Louisville</p>
                 <p><a href="mailto:HonestOverhead@outlook.com">HonestOverhead@outlook.com</a></p>
                 <p><a href="tel:+15022692351">1-502-269-2351</a></p>
+            </div>
             </div>
         </footer>
         <environment names="Development">
