@@ -86,6 +86,7 @@ a {
 }
 .frame-right {
     float:right;
+    text-align: right;
 }
 nav ul
 {
