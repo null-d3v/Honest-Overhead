@@ -58,7 +58,7 @@ namespace HonestOverhead
             {
                 routeBuilder.MapRoute(
                     name: "default",
-                    template: "{action=Home}/{id?}",
+                    template: "{action=Main}/{id?}",
                     defaults: new { controller = "Default" });
             });
         }

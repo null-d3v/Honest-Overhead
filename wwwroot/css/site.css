@@ -1,6 +1,20 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-html {
+@media only screen and (max-width: 700px)
+{
+    header, footer
+    {
+        font-size: 0.75em !important;
+    }
+
+    nav ul li a
+    {
+        min-width: 70px !important;
+    }
+}
+
+html
+{
     font-family:"Open Sans",Arial, Helvetica, sans-serif;
     font-weight:400;
     color:#333;
@@ -13,10 +27,12 @@ html {
     background-size:cover;
     min-height:100%;
 }
-body {
-    margin:0;
-    padding:0;
-    min-height:100%;
+body
+{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 500px;
 }
 h1,h2,h3,h4,h5,h6 {
     color:#111;
@@ -105,6 +121,11 @@ nav ul li a:hover
 {
     background-color: #255A845B;
     color: #255A84;
+}
+
+#header p
+{
+    margin: 0;
 }
 
 /* @media only screen and (max-width: 730px)

@@ -19,7 +19,7 @@ namespace HonestOverhead.Controllers
             return View();
         }
 
-        public IActionResult Home()
+        public IActionResult Main()
         {
             return View();
         }
