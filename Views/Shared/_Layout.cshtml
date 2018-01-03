@@ -2,15 +2,16 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - HonestOverhead</title>
         <meta name="description" content="Honest Overhead Garage Doors of Louisville is a full-service garage door repair service, specializing in residential and small commercial repairs and upgrades">
+        <meta name="robots" content="@ViewData["Robots"]" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <environment names="Development">
             <link rel="stylesheet" href="~/css/site.css" />
         </environment>
         <environment names="Staging,Production">
             <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         </environment>
+        <title>@ViewData["Title"] - HonestOverhead</title>
     </head>
     <body>
         <header id="header" class="clearfix">
