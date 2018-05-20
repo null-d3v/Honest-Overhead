@@ -2,7 +2,19 @@
 
 @media only screen and (max-width: 700px)
 {
-    header, footer
+    footer
+    {
+        font-size: 0.6em !important;
+    }
+    header h1
+    {
+        font-size: 0.9em !important;
+    }
+    header h2, header p
+    {
+        font-size: 0.75em !important;
+    }
+    header nav
     {
         font-size: 0.75em !important;
     }
@@ -77,6 +89,9 @@ a {
     box-shadow:0px 0px 10px rgba(0,0,0,0.5);
     width:100%;
     box-sizing:border-box;
+}
+.facebook {
+    width: 30px;
 }
 .frame-left,.frame-right {
     width:50%;
