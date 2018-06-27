@@ -61,12 +61,12 @@ a {
 #header {
     color: #FFFFFF;
     width:100%;
-    background: rgba(5, 168, 181, 0.9);
+    background: rgba(0, 168, 107, 0.9);
     box-shadow:0px 0px 10px rgba(0,0,0,0.5);
     box-sizing:border-box;
 }
 #body {
-    background: rgba(5, 168, 181, 0.9);
+    background: rgba(0, 168, 107, 0.9);
     color: #FFFFFF;
     padding:2em;
     margin:5em auto;
@@ -87,7 +87,7 @@ a {
     clear: both;
 }
 #footer {
-    background: rgba(5, 168, 181, 0.9);
+    background: rgba(0, 168, 107, 0.9);
     color: #FFFFFF;
     box-shadow:0px 0px 10px rgba(0,0,0,0.5);
     width:100%;
