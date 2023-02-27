@@ -1,6 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
-@media only screen and (max-width: 700px)
+﻿@media only screen and (max-width: 700px)
 {
     footer
     {
@@ -27,7 +25,7 @@
 
 html
 {
-    font-family:"Open Sans",Arial, Helvetica, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-weight:400;
     color:#333;
     font-size:1em;
@@ -48,7 +46,6 @@ body
 }
 h1,h2,h3,h4,h5,h6 {
     color:#FFFFFF;
-    font-family:"Open Sans",Arial, Helvetica, sans-serif;
     margin:0;
 }
 h2,h3,h4,h5,h6 {
@@ -146,185 +143,3 @@ nav ul li a:hover
 {
     margin: 0;
 }
-
-/* @media only screen and (max-width: 730px)
-{
-    header, footer
-    {
-        font-size: 0.7em;
-    }
-
-    main
-    {
-        margin: 5% 5% 5% 5% !important;
-    }
-
-    .frame-left
-    {
-        padding-left: 5% !important;
-    }
-
-    .frame-right
-    {
-        padding-right: 5% !important;
-    }
-}
-
-@media only screen and (max-width: 1000px)
-{
-    main
-    {
-        margin: 5% 10% 5% 10% !important;
-    }
-
-    nav ul li a
-    {
-        min-width: 60px !important;
-    }
-
-    .frame-left
-    {
-        padding-left: 10% !important;
-    }
-
-    .frame-right
-    {
-        padding-right: 10% !important;
-    }
-
-    .grid-2
-    {
-        display: block !important;
-    }
-}
-
-body
-{
-    background-image: url("/img/background.jpg");
-    font-family: "Arial";
-    margin: 0;
-    min-width: 500px;
-}
-
-h1, h2, h3
-{
-    margin: 0;
-}
-
-h3
-{
-    font-weight: normal;
-}
-
-header, footer
-{
-    background: rgba(255, 255, 255, 0.80);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 0px;
-    padding: 25px 0 25px 0;
-}
-
-footer
-{
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-}
-
-footer p
-{
-    font-weight: bold;
-    margin: 0;
-}
-
-main
-{
-    margin: 5% 15% 5% 15%;
-}
-
-nav
-{
-    align-items: center;
-}
-
-nav ul
-{
-    height: 100%;
-    line-height: 87px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li
-{
-    display: inline-block;
-    height: 100%;
-}
-
-nav ul li a
-{
-    color: #000000;
-    display: inline-block;
-    font-weight: bold;
-    height: 100%;
-    min-width: 100px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-nav ul li a:hover
-{
-    background-color: #255A845B;
-    color: #255A84;
-}
-
-.content
-{
-    background: #ffffffDA;
-    border-color: #255A84;
-    border-style: solid;
-    border-width: 5px;
-    margin-top: 20px;
-    padding: 15px;
-    width: 100%;
-}
-
-.content-right
-{
-}
-
-.frame-left
-{
-    padding-left: 30%;
-}
-
-.frame-right
-{
-    padding-right: 30%;
-    text-align: right;
-}
-
-.grid-2
-{
-    display: grid;
-}
-
-.grid-2-left
-{
-    grid-template-columns: 75% 25%;
-}
-
-.grid-2-right
-{
-    grid-template-columns: 25% 75%;
-}
-
-.summary h1
-{
-    color: #255a84;
-    text-decoration: underline;
-    text-transform: uppercase;
-} */
