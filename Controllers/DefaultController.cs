@@ -1,37 +1,39 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace HonestOverhead.Controllers
+namespace HonestOverhead;
+
+public class DefaultController : Controller
 {
-    public class DefaultController : Controller
+    [HttpGet("[action]")]
+    public IActionResult About()
     {
-        [Route("[action]")]
-        public IActionResult About()
+        return View();
+    }
+
+    [HttpGet("[action]")]
+    public IActionResult Error()
+    {
+        return View();
+    }
+
+    [HttpGet("")]
+    public IActionResult Main()
+    {
+        return View(new ContactModel());
+    }
+
+    [HttpPost("")]
+    public IActionResult Main(
+        ContactModel contactModel)
+    {
+        if (!ModelState.IsValid)
         {
-            return View();
+            Response.StatusCode =
+                StatusCodes.Status400BadRequest;
+            return View(contactModel);
         }
 
-        [Route("[action]")]
-        public IActionResult Contact()
-        {
-            return View();
-        }
-
-        [Route("[action]")]
-        public IActionResult Error()
-        {
-            return View();
-        }
-
-        [Route("")]
-        public IActionResult Main()
-        {
-            return View();
-        }
-
-        [Route("[action]")]
-        public IActionResult Services()
-        {
-            return View();
-        }
+        contactModel.IsComplete = true;
+        return View(contactModel);
     }
 }
