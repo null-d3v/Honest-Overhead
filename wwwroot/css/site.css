@@ -169,6 +169,7 @@ textarea
     color: #000000;
     display: flex;
     margin-top: 2rem;
+    min-width: 32rem;
     position: absolute;
     width: 100%;
 }
