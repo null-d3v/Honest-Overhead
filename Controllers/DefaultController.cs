@@ -1,32 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace HonestOverhead.Controllers
+namespace HonestOverhead;
+
+public class DefaultController : Controller
 {
-    public class DefaultController : Controller
+    [HttpGet("[action]")]
+    public IActionResult About()
     {
-        public IActionResult About()
-        {
-            return View();
-        }
+        return View();
+    }
 
-        public IActionResult Contact()
-        {
-            return View();
-        }
+    [HttpGet("[action]")]
+    public IActionResult Error()
+    {
+        return View();
+    }
 
-        public IActionResult Error()
-        {
-            return View();
-        }
+    [HttpGet("")]
+    public IActionResult Main(
+        bool isComplete = false)
+    {
+        return View(
+            new ContactModel
+            {
+                IsComplete = isComplete,
+            });
+    }
 
-        public IActionResult Main()
-        {
-            return View();
-        }
-
-        public IActionResult Services()
-        {
-            return View();
-        }
+    [HttpGet("[action]")]
+    public IActionResult Reviews()
+    {
+        return View();
     }
 }
