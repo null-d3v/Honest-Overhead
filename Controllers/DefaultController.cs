@@ -17,23 +17,19 @@ public class DefaultController : Controller
     }
 
     [HttpGet("")]
-    public IActionResult Main()
+    public IActionResult Main(
+        bool isComplete = false)
     {
-        return View(new ContactModel());
+        return View(
+            new ContactModel
+            {
+                IsComplete = isComplete,
+            });
     }
 
-    [HttpPost("")]
-    public IActionResult Main(
-        ContactModel contactModel)
+    [HttpGet("[action]")]
+    public IActionResult Reviews()
     {
-        if (!ModelState.IsValid)
-        {
-            Response.StatusCode =
-                StatusCodes.Status400BadRequest;
-            return View(contactModel);
-        }
-
-        contactModel.IsComplete = true;
-        return View(contactModel);
+        return View();
     }
 }

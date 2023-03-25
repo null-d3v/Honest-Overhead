@@ -6,21 +6,19 @@
 }
 
 <div class="split">
-    <div class="content clearfix">
+    <div class="content">
         <h2>Skilled & Dependable Technicians</h2>
-        <p>As honest as we are skilled, Honest Overhead Garage Doors of Louisville responds to service requests quickly and efficently. Whether you need a new garage door opener installed, a broken spring replaced, or even just a new remote we are your preferred garage door specialists. You can expect us to be professional and our work to be honest.</p>
+        <p>As honest as we are skilled, Honest Overhead Garage Doors of Louisville responds to service requests quickly and efficently. Whether you need a new garage door opener installed, a broken spring replaced, or even just a new remote, we are your preferred garage door specialists. You can expect us to be professional and our work to be honest.</p>
 
         <ul>
             <li>New garage doors</li>
             <li>Door repairs and upgrades</li>
             <li>Automatic garage door openers</li>
-            <li>24-hour service</li>
-            <li>Same day guarantee</li>
         </ul>
     </div>
     <div class="spacer">
     </div>
-    <div class="content clearfix">
+    <div class="content">
         <h2>Contact Us</h2>
         @if (Model.IsComplete)
         {
@@ -29,8 +27,9 @@
         }
         else
         {
-            <form asp-action="Contact" asp-controller="Contact" method="post" style="display: flex; flex-direction: column;">
-                <div asp-validation-summary="All"></div>
+            <form action="https://formsubmit.co/HonestOverhead@outlook.com" method="post">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://localhost:5000/?isComplete=true">
 
                 <input asp-for="Name" placeholder="Name" required>
 
@@ -47,30 +46,43 @@
     </div>
 </div>
 
-<div class="content clearfix">
-    <h2>Garage Door Installations or Replacement</h2>
-    <p>As a full-service garage door supplier, Honest Overhead Garage Doors of Louisville specializes in residential and small commercial. Including the installation of all makes and modles of sectional doors such as carriage, wood grain, bead board, and many more. We also install roll up doors for small commercial or residential.</p>
-    <p>Reputable and experienced, we are regularly called on by builders and homeowners. No project is too big or small.</p>
+<div class="split">
+    <img class="section-image" src="/img/section1.jpg">
+    <div class="content">
+        <h2>Garage Door Installation or Replacement</h2>
+        <p>As a full-service garage door supplier, Honest Overhead Garage Doors of Louisville specializes in residential and small commercial. Including the installation of all makes and models of sectional doors such as carriage, wood grain, bead board. We also install roll up doors for small commercial or residential.</p>
+        <p>Reputable and experienced, we are regularly called on by builders and homeowners. No project is too big or small.</p>
+    </div>
+</div>
 
-    <h2>Garage Door Openers</h2>
-    <p>We can provide repair services and install all major brands of openers. Whether it is Liftmaster, Chamberlain, Sears, Genie, Craftsman, Linear, etc we cover them all. Our familiarity with every make, model and operation such as chain, belt, jackshaft, or screw drive allows the comfort and assurance that the installation or repair will be done correctly.</p>
-    <p>With new and advanced technology, garage door openers have become energy efficent, quiet, and versitile. Along with the many options such as batter back up, and cell phone use.</p>
+<div class="reverse split">
+    <img class="section-image" src="/img/section2.png">
+    <div class="content">
+        <h2>Garage Door Openers</h2>
+        <p>We can provide repair services and install all major brands of openers. Whether it is Liftmaster, Chamberlain, Sears, Genie, Craftsman, or Linear, we can cover them all. Our familiarity with every make, model, and operation allows the comfort and assurance that the installation or repair will be done correctly.</p>
+        <p>Looking for an upgrade? With new and advanced technology, garage door openers have become energy efficent, quiet, and versitile. We can add enhancements like a battery backup or phone app opener to your door.</p>
+    </div>
+</div>
 
-    <h2>Repairs & Upgrades</h2>
-    <ul>
-        <li>Broken torsion spring replacement</li>
-        <li>Broken extension spring replacement</li>
-        <li>Panel Upgrades/replacement</li>
-        <li>Replacment remotes, keypads etc.</li>
-        <li>Annual maintinance</li>
-        <li>WiFi/cellphone controlled openers</li>
-        <li>Broken cables</li>
-        <li>Racked, or uneven doors</li>
-        <li>25 point inspections</li>
-        <li>Full door overhauls</li>
-        <li>Noisy door solutions</li>
-        <li>Bottom seal replacement</li>
-        <li>Free door estimates</li>
-        <li>Tune and Lube with every repair</li>
-    </ul>
+<div class="split">
+    <img class="section-image" src="/img/section3.png">
+    <div class="content">
+        <h2>Repairs & Upgrades</h2>
+        <ul>
+            <li>Broken torsion spring replacement</li>
+            <li>Broken extension spring replacement</li>
+            <li>Panel upgrades/replacement</li>
+            <li>Replacment remotes, keypads etc.</li>
+            <li>Annual maintenance</li>
+            <li>WiFi/cellphone controlled openers</li>
+            <li>Broken cables</li>
+            <li>Racked, or uneven doors</li>
+            <li>25-point inspections</li>
+            <li>Full door overhauls</li>
+            <li>Noisy door solutions</li>
+            <li>Bottom seal replacement</li>
+            <li>Free door estimates</li>
+            <li>Tune and lube with every repair</li>
+        </ul>
+    </div>
 </div>
