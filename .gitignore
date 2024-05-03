@@ -269,3 +269,5 @@ __pycache__/
 
 *.min.css
 *.min.js
+
+.mono/

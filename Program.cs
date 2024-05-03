@@ -1,4 +1,7 @@
 ﻿using Serilog;
+using WebMarkupMin.AspNetCore8;
+
+#pragma warning disable CA1031
 
 try
 {
@@ -20,9 +23,39 @@ try
     webApplicationBuilder.Services
         .AddSingleton(webApplicationBuilder.Configuration);
 
-    webApplicationBuilder.Services.AddOptions();
+    webApplicationBuilder.Services
+        .AddOptions();
 
-    webApplicationBuilder.Services.AddResponseCompression();
+    webApplicationBuilder.Services
+        .AddResponseCompression();
+    webApplicationBuilder.Services
+        .AddWebOptimizer(
+            assetPipeline =>
+            {
+                assetPipeline.MinifyCssFiles(
+                    "css/**/*.css");
+                assetPipeline.MinifyJsFiles(
+                    "js/**/*.js");
+                assetPipeline.AddCssBundle(
+                    "/css/site.min.css",
+                    "css/**/*.css");
+                assetPipeline.AddJavaScriptBundle(
+                    "/js/site.min.js",
+                    "js/**/*.js");
+            },
+            options =>
+            {
+                options.EnableDiskCache = false;
+            });
+    webApplicationBuilder.Services
+        .AddWebMarkupMin(
+            options =>
+            {
+                options.AllowMinificationInDevelopmentEnvironment = true;
+                options.AllowCompressionInDevelopmentEnvironment = true;
+            })
+        .AddHtmlMinification()
+        .AddHttpCompression();
 
     webApplicationBuilder.Services.AddRouting(
         routeOptions => routeOptions.LowercaseUrls = true);
@@ -56,7 +89,9 @@ try
 
     webApplication.MapControllers();
 
-    webApplication.Run();
+    await webApplication
+        .RunAsync()
+        .ConfigureAwait(false);
     return 0;
 }
 catch (Exception exception)
@@ -66,5 +101,9 @@ catch (Exception exception)
 }
 finally
 {
-    Log.CloseAndFlush();
+    await Log
+        .CloseAndFlushAsync()
+        .ConfigureAwait(false);
 }
+
+#pragma warning restore CA1031
