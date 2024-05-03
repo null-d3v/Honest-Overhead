@@ -1,0 +1,28 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/dotnet:8.0-bookworm",
+    "customizations":
+    {
+        "vscode":
+        {
+            "extensions":
+            [
+                "ms-dotnettools.csdevkit",
+                "ue.alphabetical-sorter"
+            ]
+        }
+    },
+    "forwardPorts":
+    [
+        5000,
+        5001
+    ],
+    "name": "HonestOverhead",
+    "portsAttributes":
+    {
+        "5001":
+        {
+            "protocol": "https"
+        }
+    },
+    "postCreateCommand": "dotnet dev-certs https"
+}
