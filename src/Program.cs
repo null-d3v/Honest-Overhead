@@ -10,8 +10,7 @@ try
 
     var webApplicationBuilder = WebApplication.CreateBuilder(args);
     webApplicationBuilder.Configuration
-        .AddJsonFile("appsettings.json", false, false);
-    webApplicationBuilder.Configuration
+        .AddJsonFile("appsettings.json", false, false)
         .AddEnvironmentVariables();
 
     webApplicationBuilder.Host.UseSerilog(
@@ -30,30 +29,14 @@ try
         .AddResponseCompression();
     webApplicationBuilder.Services
         .AddWebOptimizer(
-            assetPipeline =>
-            {
-                assetPipeline.MinifyCssFiles(
-                    "css/**/*.css");
-                assetPipeline.MinifyJsFiles(
-                    "js/**/*.js");
-                assetPipeline.AddCssBundle(
-                    "/css/site.min.css",
-                    "css/**/*.css");
-                assetPipeline.AddJavaScriptBundle(
-                    "/js/site.min.js",
-                    "js/**/*.js");
-            },
             options =>
             {
                 options.EnableDiskCache = false;
-            });
+            },
+            !webApplicationBuilder.Environment.IsDevelopment(),
+            !webApplicationBuilder.Environment.IsDevelopment());
     webApplicationBuilder.Services
-        .AddWebMarkupMin(
-            options =>
-            {
-                options.AllowMinificationInDevelopmentEnvironment = true;
-                options.AllowCompressionInDevelopmentEnvironment = true;
-            })
+        .AddWebMarkupMin()
         .AddHtmlMinification()
         .AddHttpCompression();
 
@@ -83,9 +66,12 @@ try
             .UseStatusCodePagesWithReExecute("/error/{0}");
     }
 
-    webApplication.UseResponseCompression();
-    webApplication.UseStaticFiles();
-    webApplication.UseRouting();
+    webApplication
+        .UseResponseCompression()
+        .UseWebOptimizer()
+        .UseWebMarkupMin()
+        .UseStaticFiles()
+        .UseRouting();
 
     webApplication.MapControllers();
 

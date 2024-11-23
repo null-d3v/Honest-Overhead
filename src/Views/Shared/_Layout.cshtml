@@ -5,12 +5,7 @@
         <meta name="description" content="Honest Overhead Garage Doors of Louisville is a full-service garage door repair service, specializing in residential and small commercial repairs and upgrades">
         <meta name="robots" content="@ViewData["Robots"]" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <environment names="Development">
-            <link rel="stylesheet" href="~/css/site.css" />
-        </environment>
-        <environment names="Staging,Production">
-            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        </environment>
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
         <title>@ViewData["Title"] - Honest Overhead</title>
         @RenderSection("Styles", required: false)
     </head>
@@ -67,12 +62,7 @@
             </div>
             </div>
         </footer>
-        <environment names="Development">
-            <script src="~/js/site.js" asp-append-version="true"></script>
-        </environment>
-        <environment names="Staging,Production">
-            <script src="~/js/site.min.js" asp-append-version="true"></script>
-        </environment>
+        <script src="~/js/site.js" asp-append-version="true"></script>
         @RenderSection("Scripts", required: false)
     </body>
 </html>

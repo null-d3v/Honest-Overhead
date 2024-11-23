@@ -24,5 +24,6 @@
             "protocol": "https"
         }
     },
-    "postCreateCommand": "dotnet dev-certs https"
+    "postCreateCommand": "dotnet dev-certs https",
+    "remoteUser": "root"
 }
