@@ -7,13 +7,14 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/bin/Debug/net8.0/HonestOverhead.dll",
+            "program": "${workspaceFolder}/src/bin/Debug/net9.0/HonestOverhead.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src",
             "stopAtEntry": false,
             "serverReadyAction":
             {
-                "action": "openExternally"
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)\","
             },
             "env":
             {
